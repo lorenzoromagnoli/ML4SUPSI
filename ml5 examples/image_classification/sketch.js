@@ -26,5 +26,13 @@ function gotResults( error, results ) {
     console.error( error );
   } else {
     console.log( results );
+
+    let label = results[ 0 ].className;
+    let prob = results[ 0 ].probability;
+
+    fill( 0 );
+    textSize( 30 );
+    text( label, 10, height - 100 );
+    text( prob, 10, height - 50 );
   }
 }
